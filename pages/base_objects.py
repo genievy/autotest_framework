@@ -18,12 +18,12 @@ class BaseObjects:
     def find_element(self, element):
         return self.driver.find_element(element)
 
-    def element_visible(self, locator, timeout=5):
-        return wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
+    def element_visible(self, element, timeout=5):
+        return wait(self.driver, timeout).until(EC.visibility_of_element_located(element))
 
     def lang_is(self):
         return self.driver.execute_script("return document.querySelector('html').lang")
 
-    def get_attribute(self, element, attribute):
-        script = f'return document.querySelector("{element}").{attribute}'
+    def get_attribute(self, locator, attribute):
+        script = f'return document.querySelector("{locator}").{attribute}'
         return self.driver.execute_script(script)

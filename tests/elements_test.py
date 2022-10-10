@@ -11,8 +11,6 @@ class TestBasePage:
             actual_lang = page.check_lang()
             page.change_lang()
             new_lang = page.check_lang()
-            real_lang = page.get_attribute('html', 'lang')
-            print(real_lang)
             assert new_lang != actual_lang, 'The language has not changed.'
 
     class TestDropdownMenu:
@@ -20,25 +18,29 @@ class TestBasePage:
             page = DropdownMenu(driver, url.home_page)
             page.open()
             page.open_university()
-            assert page.check_open_university() == 'true', 'The "University" drop-down menu is not displayed'
+            assert page.check_button_university() == 'expanded dropdown open', 'The "University" drop-down menu is not displayed'
+            assert page.check_open_university() != 'True', 'The "University"-button does not function'
 
         def test_faculties(self, driver):
             page = DropdownMenu(driver, url.home_page)
             page.open()
             page.open_faculties()
-            assert page.check_open_faculties() == 'true', 'The "Faculties" drop-down menu is not displayed'
+            assert page.check_button_faculties() == 'expanded dropdown open', 'The "faculties" drop-down menu is not displayed'
+            assert page.check_open_faculties() != 'True', 'The "faculties"-button does not function'
 
         def test_centers(self, driver):
             page = DropdownMenu(driver, url.home_page)
             page.open()
             page.open_centers()
-            assert page.check_open_centers() == 'true', 'The "Centers" drop-down menu is not displayed'
+            assert page.check_button_centers() == 'expanded dropdown open', 'The "Centers" drop-down menu is not displayed'
+            assert page.check_open_centers() != 'True', 'The "Centers"-button does not function'
 
         def test_events(self, driver):
             page = DropdownMenu(driver, url.home_page)
             page.open()
             page.open_events()
-            assert page.check_open_events() == 'true', 'The "Events" drop-down menu is not displayed'
+            assert page.check_button_events() == 'expanded dropdown open', 'The "Events" drop-down menu is not displayed'
+            assert page.check_open_events() != 'True', 'The "Events"-button does not function'
 
 
 class TestCustomCases:

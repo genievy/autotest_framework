@@ -28,23 +28,23 @@ class DropdownMenu(BaseObjects):
     def check_open_university(self):
         return True if self.element_visible(self.elements.UNIVERSITY_MENU) else False
 
-    def open_faculties(self):
-        self.element_visible(self.elements.FACULTIES).click()
+    def open_departments(self):
+        self.element_visible(self.elements.DEPARTMENTS).click()
 
-    def check_button_faculties(self):
-        return self.get_attribute(self.locators.FACULTIES, self.attribute.CLASS_NAME)
+    def check_button_departments(self):
+        return self.get_attribute(self.locators.DEPARTMENTS, self.attribute.CLASS_NAME)
 
-    def check_open_faculties(self):
-        return True if self.element_visible(self.elements.FACULTIES_MENU) else False
+    def check_open_departments(self):
+        return True if self.element_visible(self.elements.DEPARTMENTS_MENU) else False
 
-    def open_centers(self):
-        self.element_visible(self.elements.CENTERS).click()
+    def open_research(self):
+        self.element_visible(self.elements.RESEARCH).click()
 
-    def check_button_centers(self):
-        return self.get_attribute(self.locators.CENTERS, self.attribute.CLASS_NAME)
+    def check_button_research(self):
+        return self.get_attribute(self.locators.RESEARCH, self.attribute.CLASS_NAME)
 
-    def check_open_centers(self):
-        return True if self.element_visible(self.elements.CENTERS_MENU) else False
+    def check_open_research(self):
+        return True if self.element_visible(self.elements.RESEARCH_MENU) else False
 
     def open_events(self):
         self.element_visible(self.elements.EVENTS).click()

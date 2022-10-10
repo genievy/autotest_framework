@@ -24,16 +24,16 @@ class TestBasePage:
         def test_faculties(self, driver):
             page = DropdownMenu(driver, url.home_page)
             page.open()
-            page.open_faculties()
-            assert page.check_button_faculties() == 'expanded dropdown open', 'The "faculties" drop-down menu is not displayed'
-            assert page.check_open_faculties() != 'True', 'The "faculties"-button does not function'
+            page.open_departments()
+            assert page.check_button_departments() == 'expanded dropdown open', 'The "faculties" drop-down menu is not displayed'
+            assert page.check_open_departments() != 'True', 'The "faculties"-button does not function'
 
         def test_centers(self, driver):
             page = DropdownMenu(driver, url.home_page)
             page.open()
-            page.open_centers()
-            assert page.check_button_centers() == 'expanded dropdown open', 'The "Centers" drop-down menu is not displayed'
-            assert page.check_open_centers() != 'True', 'The "Centers"-button does not function'
+            page.open_research()
+            assert page.check_button_research() == 'expanded dropdown open', 'The "Centers" drop-down menu is not displayed'
+            assert page.check_open_research() != 'True', 'The "Centers"-button does not function'
 
         def test_events(self, driver):
             page = DropdownMenu(driver, url.home_page)

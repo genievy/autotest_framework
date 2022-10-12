@@ -10,15 +10,15 @@ class HomePageElements:
 
 
 class DropDownPageElements:
-    UNIVERSITY = (By.CSS_SELECTOR, "li[class*='expanded']:nth-child(1)")
+    UNIVERSITY = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(1)")
     UNIVERSITY_MENU = (By.CSS_SELECTOR, "li[class*='expanded']:nth-child(1)>ul")
     PROGRAMS = (By.XPATH, "//a[@href='/education']/..")
-    DEPARTMENTS = (By.CSS_SELECTOR, "li[class*='expanded']:nth-child(3)")
-    DEPARTMENTS_MENU = (By.CSS_SELECTOR, "li[class*='expanded']:nth-child(3)>ul")
-    RESEARCH = (By.CSS_SELECTOR, "li[class*='expanded']:nth-child(4)")
-    RESEARCH_MENU = (By.CSS_SELECTOR, "li[class*='expanded']:nth-child(4)>ul")
-    EVENTS = (By.CSS_SELECTOR, "li[class*='expanded']:nth-child(5)")
-    EVENTS_MENU = (By.CSS_SELECTOR, "li[class*='expanded']:nth-child(5)>ul")
+    DEPARTMENTS = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(3)")
+    DEPARTMENTS_MENU = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(3)>ul")
+    RESEARCH = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(4)")
+    RESEARCH_MENU = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(4)>ul")
+    EVENTS = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(5)")
+    EVENTS_MENU = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(5)>ul")
 
 
 class DropDownPageLocators:

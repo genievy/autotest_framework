@@ -6,14 +6,14 @@ class HomePageElements:
     RU_LANG = (By.CSS_SELECTOR, "[id='lang-links']>ul>li:last-of-type")
     NOT_ACTUAL_LANG = (By.CSS_SELECTOR, "[id='lang-links']>ul>li>a")
     ACTUAL_LANG = (By.CSS_SELECTOR, "[id='lang-links']>ul>li>span")
-    HTML = (By.CSS_SELECTOR, "html[lang]")
+    # HTML = (By.CSS_SELECTOR, "html[lang]")
 
 
 class DropDownPageElements:
     UNIVERSITY = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(1)")
     UNIVERSITY_MENU = (By.CSS_SELECTOR, "li[class*='expanded']:nth-child(1)>ul")
     PROGRAMS = (By.XPATH, "//a[@href='/education']/..")
-    DEPARTMENTS = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(3)")
+    DEPARTMENTS = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(3)")  # child(3)
     DEPARTMENTS_MENU = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(3)>ul")
     RESEARCH = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(4)")
     RESEARCH_MENU = (By.CSS_SELECTOR, "[class*='expanded']:nth-child(4)>ul")
@@ -26,10 +26,10 @@ class DropDownPageLocators:
     DEPARTMENTS: str = "[class*='menu nav']>li:nth-child(3)"
     RESEARCH: str = "[class*='menu nav']>li:nth-child(4)"
     EVENTS: str = "[class*='menu nav']>li:nth-child(5)"
-    HTML: str = "html"
+    HTML: str = "html" # HTML
 
 
 class DropDownPageAttribute:
-    CLASS_NAME = "className"
+    CLASS_NAME: str = "className"
     AREA_EXPANDED: str = "ariaExpanded"
     LANG: str = "lang"

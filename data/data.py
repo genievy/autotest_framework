@@ -1,3 +1,3 @@
 
 class Url:
-    home_page: str = 'https://eusp.org/'
+    home_page: str = 'http://eusp.org/'
